@@ -16,17 +16,17 @@ require_once('src/Controller/GridController.php');
 
 for ($i = 0; $i < 10; $i++) {
 
-    $refuelVessel[$i] = new SupportCraft('Refuel' . $i);
+    $refuelVessel[$i] = new SupportCraft('Refuel');
 }
 
 for ($i = 0; $i < 10; $i++) {
 
-    $cargoVessel[$i] = new SupportCraft('Cargo' . $i);
+    $cargoVessel[$i] = new SupportCraft('Cargo');
 }
 
 for ($i = 0; $i < 5; $i++) {
 
-    $mechanicalVessel[$i] = new SupportCraft('Mechanical' . $i);
+    $mechanicalVessel[$i] = new SupportCraft('Mechanical');
 }
 
 /**

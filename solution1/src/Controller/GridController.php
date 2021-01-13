@@ -7,12 +7,18 @@ class GridController
 {
     public function gridInit($grid)
     {
-        /**Loop on the vertical lines */
+
         for ($i = 0; $i < 100; $i++) {
-            /**Loop on the horizontal lines */
             for ($j = 0; $j < 100; $j++) {
 
-                echo $grid[$i][$j] = 'x |';
+                $grid[$i][$j] = 0;
+            }
+        }
+
+        for ($i = 0; $i < 100; $i++) {
+            for ($j = 0; $j < 100; $j++) {
+
+                echo $grid[$i][$j] . "\t |";
             }
             echo "<br>";
         }
