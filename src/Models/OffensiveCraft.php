@@ -1,7 +1,17 @@
 <?php
 
-class OffensiveCraft extends Vessel
+namespace src\Models;
+use src\Models\Vessel;
+
+class OffensiveCraft
 {
+    /**
+     * There is different types of vessels that will be created. Init to an empty string
+     *
+     * @var string
+     */
+    protected $vesselType = '';
+
     /**
      * Each offensive craft can be instructed to raise their shields. Init to false
      *
@@ -28,7 +38,7 @@ class OffensiveCraft extends Vessel
      *
      * @var boolean
      */
-    protected $isCommand = false;
+    public $isCommand = false;
 
     /**
      * Build the parameters of a new future OffensiveVessel. This vessel will have a type(cruiser, destroyer etc...) and a precise number of cannons

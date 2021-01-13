@@ -1,7 +1,17 @@
 <?php
 
-class SupportCraft extends Vessel
+namespace src\Models;
+use src\Models\Vessel;
+
+class SupportCraft
 {
+    /**
+     * There is different types of vessels that will be created. Init to an empty string
+     *
+     * @var string
+     */
+    protected $vesselType = '';
+
     /**
      * Each support Craft carry a medical unit. Init to true
      * Protected, to be visible in all classes that extend this class, also parent class
