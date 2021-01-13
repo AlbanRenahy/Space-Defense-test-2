@@ -5,6 +5,7 @@ use src\Models\OffensiveCraft;
 
 require_once('src/Models/OffensiveCraft.php');
 require_once('src/Models/SupportCraft.php');
+require_once('src/Controller/GridController.php');
 
 /**
  * Build our different types of Support Vessel by instanciation of new Object SupportCraft(from Models)
@@ -53,6 +54,7 @@ for ($i = 0; $i < 10; $i++) {
     $destroyerVessel[$i] = new OffensiveCraft('Destroyer' . $i, 12);
 }
 
+
 /**Init the vessels arrays */
 $totalSupportVessel = [];
 $totalOffensiveVessel = [];
@@ -72,3 +74,8 @@ echo 'Battleship Vessel : ' . count($battleshipVessel) . '<br>';
 echo 'Cruiser Vessel : ' . count($cruiserVessel) . '<br>';
 echo 'Destroyer Vessel : ' . count($destroyerVessel) . '<br>';
 echo '<hr>';
+
+/**Instanciation of the grid */
+$map = new GridController();
+$grid = [];
+$map->gridInit($grid);
