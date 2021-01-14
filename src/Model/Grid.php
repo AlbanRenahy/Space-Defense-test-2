@@ -74,6 +74,12 @@ class Grid
         return false;
     }
 
+    /** Function to have the number of placed vessels from positions collection */
+    public function numbersOfPlacedVessels(): int
+    {
+        return $this->positions->count();
+    }
+
     // 5 - remove the position
 
     // 6 - place vessels in pair mode

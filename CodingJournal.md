@@ -17,7 +17,11 @@ Not being finally satisfied with this approach which is not completely object or
 
 ## Day 2
 
-- I started by educating myself a bit more about unit testing to create my first tests with phpUnit. First test of the application created to check that the total number of vessels does not exceed the maximum indicated.
+- Educating myself a bit more about unit testing to create my first tests with phpUnit. First test of the application created to check that the total number of vessels does not exceed the maximum indicated.
 
-- I also worked on the data structure by adding a role and the possibility of creating a new character on the commandShip
-- Main purpose of today is to create algorithm for grid and the pairs vessels strategy.
+- Working on the data structure by adding a role and the possibility of creating a new character on the commandShip
+
+- Implement the grid and vessels position algorithm. First with steps in comments and then by coding. Still a difficult part for me to modeling every coding steps to arrive on the wanted goal. 
+I took time to think about the steps I need to pass to create the algorithm, and then translate on the code.
+
+
