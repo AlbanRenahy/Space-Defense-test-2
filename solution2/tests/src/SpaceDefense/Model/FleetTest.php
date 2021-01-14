@@ -1,30 +1,27 @@
 <?php
 
-namespace App\SpaceDefense\Model\Tests;
+namespace App\Tests\SpaceDefence\Model;
 
-use PHPUnit\Framework\TestCase;
+use App\SpaceDefence\Model\Character;
 use App\SpaceDefence\Model\Fleet;
+use App\SpaceDefence\Model\Role;
 use App\SpaceDefence\Model\Vessel;
-use App\SpaceDefence\Model\Vessel\CommandShip;
+use PHPUnit\Framework\TestCase;
 
-/**
- * Testing the Fleet class functions to check if number of created vessels is equal to 50(total number of vessels)
- */
 class FleetTest extends TestCase
 {
     public function testFleet()
     {
-        /** Instanciation of Fleet and CommandShip classes. CammandShip has no utility from now, but will work on it later */
-        $commandShip = new CommandShip();
+        $commandant = new Character(Role::admiral(), 'Alban');
+        $commandShip = new Vessel\CommandShip($commandant);
+
         $fleet = new Fleet($commandShip);
 
-
-        /**Set the number of vessels for each support craft */
         $supportCraftCreation = function (Fleet $fleet) {
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 5; $i++) {
                 $fleet->addSupportCraft(new Vessel\SupportCraft\Cargo());
             }
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 5; $i++) {
                 $fleet->addSupportCraft(new Vessel\SupportCraft\MechanicalAssistance());
             }
             for ($i = 1; $i <= 5; $i++) {
@@ -32,7 +29,6 @@ class FleetTest extends TestCase
             }
         };
 
-        /**Set the number of vessels for each offensive craft */
         $offensiveCraftsCreation = function (Fleet $fleet) {
             for ($i = 1; $i <= 10; $i++) {
                 $fleet->addOffensiveCraft(new Vessel\OffensiveCraft\Battleship());
@@ -45,11 +41,9 @@ class FleetTest extends TestCase
             }
         };
 
-        /** Passing in parameters the fleet object that has a fleet composition set to 0*/
         $supportCraftCreation($fleet);
         $offensiveCraftsCreation($fleet);
 
-        /**AssertEquals allo phpUnit to verify if 2 variables are equal. In this case, if the total number of vessels is equel to 50 */
-        $this->assertEquals(50, $fleet->numberOfVessels());
+        $this->assertEquals(40, $fleet->numberOfVessels());
     }
 }
