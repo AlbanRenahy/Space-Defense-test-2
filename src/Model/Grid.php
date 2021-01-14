@@ -22,17 +22,61 @@ class Grid
         $this->positions = new ArrayCollection();
     }
 
-    // 1 - create the Dimensions
+    /** x axis for the grid */
+    public function x(): int
+    {
+        return $this->x;
+    }
 
-    // 2 - Place vessels randomly
+    /** y axis for the grid */
+    public function y(): int
+    {
+        return $this->y;
+    }
 
-    // 3 - Place vessels in pair mode
+    /** Set the grid dimensions */
+    public static function createDimension($x = 100, $y = 100)
+    {
+        return new self($x, $y);
+    }
 
-    // 4 - Place vessel at position
+    /** Place vessels randomly */ 
+    public function placeVesselsRandom(Fleet $fleet): void
+    {
+        $fleet->placeVesselsOnGridRandom($this);
+    }
 
-    // 5 - Is the position not already alocated ?
+    /** Place vessel at a certain position */ 
+    public function placeVesselAtPosition(Position $position, Vessel $vessel): void
+    {
+        /** A vessel occupy a certain position */
+        $position->occupiedBy($vessel);
+        /** We add this position in the positions array collection */
+        $this->positions->add($position);
+    }
 
-    // 6 - remove the position
+    /** Function checking if the position is already alocated */
+    public function isPositionIsNotAlreadyAllocated(Position $position): bool
+    {
+        /** this->positions refer to the array collection */
+        foreach ($this->positions as $positionCollectionItem) {
+            /** $position refer to the random number set to each grid box) */
+            $a = [$position->y(), $position->x()];
+            /** $positionCollectionItem refer to a position already allocated by a vessel (see placeVesselAtPosition() */
+            $b = [$positionCollectionItem->y(), $positionCollectionItem->x()];
+
+            /** If $a === $b, it means that position is not already allocated. */
+            if ($a === $b) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // 5 - remove the position
+
+    // 6 - place vessels in pair mode
 
     // 7 - Move a pair
 

@@ -8,6 +8,9 @@ use src\Model\Role;
 use src\Model\Vessel;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Test to check if total number of vessels not overwhelming the total fleet number given
+ */
 class FleetTest extends TestCase
 {
     public function testFleet()

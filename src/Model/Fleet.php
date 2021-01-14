@@ -68,9 +68,34 @@ class Fleet
         return $this->fleetComposition;
     }
 
+    /** The 2 fleet groups need to be equal. If it's not equal, return false*/
     public function isFleetGroupsEquals(): bool
     {
         return $this->offensiveCrafts->count() == $this->supportCrafts->count();
+    }
+
+    /**Private function to merge the 2 arrays (Support and Offensive crafts) */
+    private function vessels(): Collection
+    {
+        return new ArrayCollection(array_merge($this->supportCrafts->toArray(), $this->offensiveCrafts->toArray()));
+    }
+
+    /** Function that place vessels on the grid*/
+    public function placeVesselsOnGridRandom(Grid $grid)
+    {
+        /**generate all the positions on the grid with function random */
+        $generatePosition = function() use ($grid) {
+            return Position::random($grid);
+        };
+
+        /** this->vessels() refer to the collection of all vessels merged */
+         foreach ($this->vessels() as $vessel) {
+            $position = $generatePosition();
+            while ($grid->isPositionIsNotAlreadyAllocated($position)) {
+                $position = $generatePosition();
+            }
+            $grid->placeVesselAtPosition($position, $vessel);
+        }
     }
 
 

@@ -15,11 +15,13 @@ abstract class Vessel
         $this->position = new Position();
     }
 
+    /** Function that will allow a vessel to move(not in use at the moment) */
     public function moveTo(Position $position)
     {
         $this->position = $position;
     }
 
+    /** Function that will delete vital point of an attacked vessel */
     public function receiveAttack()
     {
         //@todo delete vital points
