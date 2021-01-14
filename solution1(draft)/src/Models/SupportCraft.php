@@ -3,14 +3,8 @@
 namespace src\Models;
 use src\Models\Vessel;
 
-class SupportCraft
+class SupportCraft extends Vessel
 {
-    /**
-     * There is different types of vessels that will be created. Init to an empty string
-     *
-     * @var string
-     */
-    protected $vesselType = '';
 
     /**
      * Each support Craft carry a medical unit. Init to true

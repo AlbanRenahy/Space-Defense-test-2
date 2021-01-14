@@ -4,22 +4,20 @@ namespace App\SpaceDefence\Model\Vessel;
 
 use App\SpaceDefence\Model\Vessel;
 use App\SpaceDefence\Model\Vessel\SupportCraft\MedicalUnit;
+use App\SpaceDefence\Model\Vessel\SupportCraft\Order;
 
-/**
- * Common elements to all support crafts.
- * Each support craft has a medical unit and can receive an order
- */
 abstract class SupportCraft extends Vessel
 {
     protected MedicalUnit $medicalUnit;
+    protected Order $order;
 
     public function addMedicalUnit(MedicalUnit $medicalUnit)
     {
         $this->medicalUnit = $medicalUnit;
     }
 
-    public function doThatNow(string $that)
+    public function addOrder(Order $order)
     {
-        echo (string) $that;
+        $this->order = $order;
     }
 }

@@ -3,14 +3,8 @@
 namespace src\Models;
 use src\Models\Vessel;
 
-class OffensiveCraft
+class OffensiveCraft extends Vessel
 {
-    /**
-     * There is different types of vessels that will be created. Init to an empty string
-     *
-     * @var string
-     */
-    protected $vesselType = '';
 
     /**
      * Each offensive craft can be instructed to raise their shields. Init to false
