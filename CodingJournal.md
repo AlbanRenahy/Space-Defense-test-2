@@ -11,9 +11,6 @@
 Not being finally satisfied with this approach which is not completely object oriented, I preferred to recreate a new model class structure to better represent my data schema.
 
 - For the new solution, I wanted to better separate the different structural elements into distinct classes and insist on the notion of inheritance, to avoid repeating my values. In this new structure, I can add a new type of ship with little effort, creating the corresponding class and hearing from the corresponding category of ships (Support or Offensive).
-Here is the diagram of my model structure with the corresponding classes attached:
-
-"Schema to add"
 
 - Learning on CI/CD concept, create unit tests and setup CI/CD on GitHub Actions
 
