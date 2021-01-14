@@ -1,7 +1,7 @@
 <?php
 
-use src\Models\SupportCraft;
-use src\Models\OffensiveCraft;
+use app\Models\SupportCraft;
+use app\Models\OffensiveCraft;
 
 require_once('src/Models/OffensiveCraft.php');
 require_once('src/Models/SupportCraft.php');

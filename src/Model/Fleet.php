@@ -1,11 +1,11 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
-use App\SpaceDefence\Exception\FleetMaxVessels;
-use App\SpaceDefence\Model\Vessel\CommandShip;
-use App\SpaceDefence\Model\Vessel\OffensiveCraft;
-use App\SpaceDefence\Model\Vessel\SupportCraft;
+use src\Exception\FleetMaxVessels;
+use src\Model\Vessel\CommandShip;
+use src\Model\Vessel\OffensiveCraft;
+use src\Model\Vessel\SupportCraft;
 
 /**
  * Class that allow to had offensive and support craft, if max_vessels number is not overwhelmed
@@ -14,10 +14,10 @@ class Fleet
 {
     const MAX_VESSELS = 50;
 
-    private CommandShip $commandShip;
-    protected array $offensiveCrafts;
-    protected array $supportCrafts;
-    private int $fleetComposition;
+    private $commandShip;
+    protected $offensiveCrafts;
+    protected $supportCrafts;
+    private $fleetComposition;
 
     public function __construct(CommandShip $commandShip)
     {

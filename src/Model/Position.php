@@ -1,14 +1,14 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
 /**
  * Future position of a vessel on the grid
  */
 class Position
 {
-    private int $x;
-    private int $y;
+    private $x;
+    private $y;
 
     public function __construct(int $x = 0, int $y = 0)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\SpaceDefence\Model\Vessel;
+namespace src\Model\Vessel;
 
-use App\SpaceDefence\Model\Vessel;
+use src\Model\Vessel;
 
 /**
  * Common elements to all offencive crafts.
@@ -10,8 +10,8 @@ use App\SpaceDefence\Model\Vessel;
  */
 abstract class OffensiveCraft extends Vessel
 {
-    protected int $cannons;
-    private bool $shieldRaised;
+    protected $cannons;
+    private $shieldRaised;
 
     public function __construct()
     {

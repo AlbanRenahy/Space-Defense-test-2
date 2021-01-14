@@ -1,8 +1,8 @@
 <?php
 
-namespace App\SpaceDefence\Model\Vessel\SupportCraft;
+namespace src\Model\Vessel\SupportCraft;
 
-use App\SpaceDefence\Model\Vessel\SupportCraft;
+use src\Model\Vessel\SupportCraft;
 
 class Refueling extends SupportCraft
 {

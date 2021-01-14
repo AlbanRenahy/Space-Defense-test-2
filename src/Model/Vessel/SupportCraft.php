@@ -1,15 +1,15 @@
 <?php
 
-namespace App\SpaceDefence\Model\Vessel;
+namespace src\Model\Vessel;
 
-use App\SpaceDefence\Model\Vessel;
-use App\SpaceDefence\Model\Vessel\SupportCraft\MedicalUnit;
-use App\SpaceDefence\Model\Vessel\SupportCraft\Order;
+use src\Model\Vessel;
+use src\Model\Vessel\SupportCraft\MedicalUnit;
+use src\Model\Vessel\SupportCraft\Order;
 
 abstract class SupportCraft extends Vessel
 {
-    protected MedicalUnit $medicalUnit;
-    protected Order $order;
+    protected $medicalUnit;
+    protected $order;
 
     public function addMedicalUnit(MedicalUnit $medicalUnit)
     {

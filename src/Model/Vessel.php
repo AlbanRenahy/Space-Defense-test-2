@@ -1,6 +1,6 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
 /**
  * Common elements to all vessels
@@ -8,7 +8,7 @@ namespace App\SpaceDefence\Model;
  */
 abstract class Vessel
 {
-    private Position $position;
+    private $position;
 
     public function __construct()
     {

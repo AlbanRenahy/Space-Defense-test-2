@@ -1,7 +1,7 @@
 <?php
 
-namespace src\Models;
-use src\Models\Vessel;
+namespace app\Models;
+use app\Models\Vessel;
 
 class OffensiveCraft extends Vessel
 {

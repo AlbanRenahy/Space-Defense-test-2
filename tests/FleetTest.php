@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Tests\SpaceDefence\Model;
+namespace tests;
 
-use App\SpaceDefence\Model\Character;
-use App\SpaceDefence\Model\Fleet;
-use App\SpaceDefence\Model\Role;
-use App\SpaceDefence\Model\Vessel;
+use src\Model\Character;
+use src\Model\Fleet;
+use src\Model\Role;
+use src\Model\Vessel;
 use PHPUnit\Framework\TestCase;
 
 class FleetTest extends TestCase

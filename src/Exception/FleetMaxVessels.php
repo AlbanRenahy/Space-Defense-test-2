@@ -1,6 +1,6 @@
 <?php
 
-namespace App\SpaceDefence\Exception;
+namespace src\Exception;
 
 class FleetMaxVessels
 {

@@ -1,18 +1,16 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
 /**Character of the CommandShip. A character has a role('admiral'), a name('alban') and take part of vessels collection */
 class Character
 {
-    private Role $role;
-    private string $name;
-    private $vessels;
+    private $role;
+    private $name;
 
-    public function __construct(Role $role, string $name, array $vessels)
+    public function __construct(Role $role, string $name)
     {
         $this->role = $role;
         $this->name = $name;
-        $this->vessels = $vessels;
     }
 }

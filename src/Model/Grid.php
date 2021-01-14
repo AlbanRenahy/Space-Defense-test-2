@@ -1,15 +1,15 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
-use App\SpaceDefence\Exception;
+use src\Exception;
 
 class Grid
 {
-    private array $positions;
+    private $positions;
 
-    private int $x;
-    private int $y;
+    private $x;
+    private $y;
 
     public function __construct(int $x, int $y)
     {
@@ -22,5 +22,9 @@ class Grid
     public static function createDimension($x = 100, $y = 100)
     {
         return new self($x, $y);
+    }
+
+    public function show(){
+        echo 'coucouc';
     }
 }

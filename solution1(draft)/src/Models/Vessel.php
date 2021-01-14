@@ -1,5 +1,5 @@
 <?php
-namespace src\Models;
+namespace app\Models;
 
 class Vessel
 {

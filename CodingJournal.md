@@ -1,6 +1,6 @@
-Postponement of my choices and actions during the exercise:
+# Postponement of my choices and actions during the exercise:
 
-Day 1:
+## Day 1:
 
 - I started by creating a new repository on GitHub for my project, on the "develop" branch.
 
@@ -18,7 +18,7 @@ Here is the diagram of my model structure with the corresponding classes attache
 - Learning on CI/CD concept, create unit tests and setup CI/CD on GitHub Actions
 
 
-Day 2
+## Day 2
 
 - I started by educating myself a bit more about unit testing to create my first tests with phpUnit. First test of the application created to check that the total number of vessels does not exceed the maximum indicated.
 

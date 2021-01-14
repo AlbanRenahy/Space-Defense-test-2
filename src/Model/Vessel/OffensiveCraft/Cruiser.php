@@ -1,8 +1,8 @@
 <?php
 
-namespace App\SpaceDefence\Model\Vessel\OffensiveCraft;
+namespace src\Model\Vessel\OffensiveCraft;
 
-use App\SpaceDefence\Model\Vessel\OffensiveCraft;
+use src\Model\Vessel\OffensiveCraft;
 
 class Cruiser extends OffensiveCraft
 {

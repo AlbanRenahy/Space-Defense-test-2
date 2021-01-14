@@ -1,13 +1,13 @@
 <?php
 
-namespace App\SpaceDefence\Model;
+namespace src\Model;
 
 /** Modeling the role of admiral */
 class Role
 {
     public const ADMIRAL = 'admiral';
 
-    private string $name;
+    private $name;
 
     private function __construct(string $name)
     {

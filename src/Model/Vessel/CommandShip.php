@@ -1,9 +1,9 @@
 <?php
 
-namespace App\SpaceDefence\Model\Vessel;
+namespace src\Model\Vessel;
 
-use App\SpaceDefence\Model\Character;
-use App\SpaceDefence\Model\Vessel;
+use src\Model\Character;
+use src\Model\Vessel;
 
 /** Class reflecting the one commandShip of the Fleet(this commandShip has one character, the commandant(admrial)) */
 class CommandShip extends Vessel
