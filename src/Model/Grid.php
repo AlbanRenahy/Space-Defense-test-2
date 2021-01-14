@@ -2,29 +2,27 @@
 
 namespace src\Model;
 
-use src\Exception;
-
+/**
+ * This class create a grid of 100x100 boxes
+ */
 class Grid
 {
-    private $positions;
-
-    private $x;
-    private $y;
-
-    public function __construct(int $x, int $y)
+    public function gridInit($grid)
     {
-        $this->x = $x;
-        $this->y = $y;
 
-        $this->positions = [];
-    }
+        for ($i = 0; $i < 100; $i++) {
+            for ($j = 0; $j < 100; $j++) {
 
-    public static function createDimension($x = 100, $y = 100)
-    {
-        return new self($x, $y);
-    }
+                $grid[$i][$j] = 0;
+            }
+        }
 
-    public function show(){
-        echo 'coucouc';
+        for ($i = 0; $i < 100; $i++) {
+            for ($j = 0; $j < 100; $j++) {
+
+                echo $grid[$i][$j] . "\t |";
+            }
+            echo "<br>";
+        }
     }
 }

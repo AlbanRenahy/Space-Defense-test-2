@@ -2,9 +2,9 @@
 
 use src\Model\Grid;
 
-require_once('./solution2/src/SpaceDefence/Model/Grid.php');
+require_once('./src/Model/Grid.php');
 
-$show = new Grid(1,2);
-
-return $show->show();
+$map = new Grid();
+$grid = [];
+var_dump($map->gridInit($grid));
 
