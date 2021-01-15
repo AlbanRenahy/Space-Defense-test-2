@@ -25,3 +25,6 @@ Not being finally satisfied with this approach which is not completely object or
 I took time to think about the steps I need to pass to create the algorithm, and then translate on the code.
 
 
+## Day 3 
+
+- 
