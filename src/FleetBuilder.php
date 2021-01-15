@@ -7,7 +7,7 @@ use src\Model\Fleet;
 use src\Model\Role;
 use src\Model\Vessel;
 
-/** Class to add different types of vessels to fleet */
+/** Class to add different numbers of vessels to fleet */
 class FleetBuilder
 {
     /** Add each type of vessel to fleet */
