@@ -6,7 +6,7 @@ use src\Model\Grid;
 use src\FleetBuilder;
 use src\FleetComposition;
 
-function testRandomMoveOfVesselOnGrid()
+function RandomMoveOfVesselOnGrid()
 {
     $grid = Grid::createDimension();
 
@@ -37,4 +37,4 @@ function testRandomMoveOfVesselOnGrid()
     }
 }
 
-return testRandomMoveOfVesselOnGrid();
+return RandomMoveOfVesselOnGrid();

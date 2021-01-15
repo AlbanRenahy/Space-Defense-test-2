@@ -23,7 +23,7 @@ abstract class OffensiveCraft extends Vessel
     }
 
     /** Function that will handle attacks. Still some work to do (with an amount of life for each vessel)*/
-    public function attack(Vessel $target): void
+    public function attack(Vessel $target)
     {
         $this->fireCanons();
 
@@ -31,13 +31,13 @@ abstract class OffensiveCraft extends Vessel
 
     }
 
-    private function fireCanons(): void
+    private function fireCanons()
     {
         //@todo remove some bullets on the vessel
     }
 
     /** When a shield is raised one time, we can't raise it a second time */
-    public function invertShields(): void
+    public function invertShields()
     {
         $this->shieldRaised = !$this->shieldRaised;
     }

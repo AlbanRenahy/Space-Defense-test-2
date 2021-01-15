@@ -32,24 +32,16 @@ class Fleet
     }
 
     /** Add one offensive craft */
-    public function addOffensiveCraft(OffensiveCraft $offensiveCraft): void
+    public function addOffensiveCraft(OffensiveCraft $offensiveCraft)
     {
-        if ($this->offensiveCrafts->contains($offensiveCraft)) {
-            return;
-        }
-
         $this->assertMaxComposition();
         $this->offensiveCrafts->add($offensiveCraft);
         $this->fleetComposition++;
     }
 
     /** Add one support craft */
-    public function addSupportCraft(SupportCraft $supportCraft): void
+    public function addSupportCraft(SupportCraft $supportCraft)
     {
-        if ($this->supportCrafts->contains($supportCraft)) {
-            return;
-        }
-
         $this->assertMaxComposition();
         $this->supportCrafts->add($supportCraft);
         $this->fleetComposition++;

@@ -27,4 +27,10 @@ I took time to think about the steps I need to pass to create the algorithm, and
 
 ## Day 3 
 
-- 
+- Set an algorithm to test the random placement of Vessels on the grid.
+  
+- I also started to implement the logic to create pairs and to place them on the grid.
+
+- Tech learning CI/CD implements + some tets with it.
+  
+- Reading again the code done, write more comments to explain and answer the final questions.

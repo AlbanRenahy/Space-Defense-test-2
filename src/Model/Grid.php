@@ -48,7 +48,7 @@ class Grid
 
     
     /** Place vessel at a certain position */ 
-    public function placeVesselAtPosition(Position $position, Vessel $vessel): void
+    public function placeVesselAtPosition(Position $position, Vessel $vessel)
     {
         /** A vessel occupy a certain position */
         $position->occupiedBy($vessel);
@@ -82,7 +82,7 @@ class Grid
 
     
     /** Place vessels randomly. Used on index.php */ 
-    public function placeVesselsRandom(Fleet $fleet): void
+    public function placeVesselsRandom(Fleet $fleet)
     {
         $fleet->placeVesselsOnGridRandom($this);
     }
