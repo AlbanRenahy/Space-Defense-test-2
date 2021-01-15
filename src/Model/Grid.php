@@ -34,18 +34,19 @@ class Grid
         return $this->y;
     }
 
+
+
+    //-------------------------
+
+
+
     /** Set the grid dimensions */
     public static function createDimension($x = 100, $y = 100)
     {
         return new self($x, $y);
     }
 
-    /** Place vessels randomly */ 
-    public function placeVesselsRandom(Fleet $fleet): void
-    {
-        $fleet->placeVesselsOnGridRandom($this);
-    }
-
+    
     /** Place vessel at a certain position */ 
     public function placeVesselAtPosition(Position $position, Vessel $vessel): void
     {
@@ -54,7 +55,7 @@ class Grid
         /** We add this position in the positions array collection */
         $this->positions->add($position);
     }
-
+    
     /** Function checking if the position is already alocated */
     public function isPositionIsNotAlreadyAllocated(Position $position): bool
     {
@@ -64,15 +65,29 @@ class Grid
             $a = [$position->y(), $position->x()];
             /** $positionCollectionItem refer to a position already allocated by a vessel (see placeVesselAtPosition() */
             $b = [$positionCollectionItem->y(), $positionCollectionItem->x()];
-
+            
             /** If $a === $b, it means that position is not already allocated. */
             if ($a === $b) {
                 return true;
             }
         }
-
+        
         return false;
     }
+
+
+
+    //-------------------------
+
+
+    
+    /** Place vessels randomly. Used on index.php */ 
+    public function placeVesselsRandom(Fleet $fleet): void
+    {
+        $fleet->placeVesselsOnGridRandom($this);
+    }
+
+
 
     /** Function to have the number of placed vessels from positions collection */
     public function numbersOfPlacedVessels(): int
@@ -80,6 +95,9 @@ class Grid
         return $this->positions->count();
     }
 
+
+
+    
     // 5 - remove the position
 
     // 6 - place vessels in pair mode

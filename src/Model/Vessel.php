@@ -26,4 +26,24 @@ abstract class Vessel
     {
         //@todo delete vital points
     }
+
+
+    /** A vessel is assignated as a 'pair' */
+    public function pair(): Vessel
+    {
+        return $this->pair;
+    }
+
+    /** I set a second vessel pair */
+    public function setPair(Vessel $vessel)
+    {
+        $this->pair = $vessel;
+    }
+
+    /** I pair the first vessel with the second one */
+    public function pairWith(Vessel $vessel)
+    {
+        $this->pair = $vessel;
+        $vessel->setPair($this);
+    }
 }

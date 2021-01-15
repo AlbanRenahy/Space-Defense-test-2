@@ -43,4 +43,6 @@ class Position
         return $this->y;
     }
 
+    // TODO: a function to make adjacent 2 positions
+
 }
